@@ -540,6 +540,8 @@ class Tools(tk.Frame):
             round(img_corners[0, 1] - upper)
         )
         h, w = img.shape
+        if w is None:
+            w = h
         obstacles[y : y + h, x : x + w] = obstacles[y : y + h, x : x + w] & np.where(
             img > 100, 255, 0
         )

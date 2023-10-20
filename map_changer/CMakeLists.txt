@@ -12,10 +12,11 @@ find_package(catkin REQUIRED
 
 catkin_package(
   LIBRARIES ${PROJECT_NAME}
-  rospy
-  std_msgs
-  nav_msgs
-  std_srvs
+  CATKIN_DEPENDS
+    rospy
+    std_msgs
+    nav_msgs
+    std_srvs
 )
 
 catkin_install_python(PROGRAMS
