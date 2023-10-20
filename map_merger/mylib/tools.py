@@ -539,9 +539,8 @@ class Tools(tk.Frame):
         x, y = int(round(img_corners[0, 0] - left)), int(
             round(img_corners[0, 1] - upper)
         )
-        h, w = img.shape
-        if w is None:
-            w = h
+        h = img.shape[0]
+        w = img.shape[1]
         obstacles[y : y + h, x : x + w] = obstacles[y : y + h, x : x + w] & np.where(
             img > 100, 255, 0
         )
@@ -563,7 +562,8 @@ class Tools(tk.Frame):
             img = np.array(img, dtype=np.uint8)
             x = int(round(img_corners[i, [0, 2, 4, 6]].min() - left))
             y = int(round(img_corners[i, [1, 3, 5, 7]].min() - upper))
-            h, w = img.shape
+            h = img.shape[0]
+            w = img.shape[1]
             obstacles[y : y + h, x : x + w] = obstacles[
                 y : y + h, x : x + w
             ] & np.where(img > 100, 255, 0)
