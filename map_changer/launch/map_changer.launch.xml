@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- Arguments -->
+    <arg name="multi_map_dir"   default="$(find-pkg-share map_changer)/test"/>
+    <arg name="waypoints_file"  default="$(var multi_map_dir)/waypoints.yaml"/>
+
+    <!-- Map changer -->
+    <node pkg="map_changer" exec="map_changer.py" output="screen">
+        <param name="multi_map_dir"     value="$(var multi_map_dir)"/>
+        <param name="waypoints_file"    value="$(var waypoints_file)"/>
+    </node>
+</launch>
