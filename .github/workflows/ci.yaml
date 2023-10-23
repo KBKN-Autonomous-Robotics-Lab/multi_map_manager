@@ -51,7 +51,7 @@ jobs:
       - name: run industrial_ci
         uses: 'ros-industrial/industrial_ci@master'
         env:
-          ROS_DISTRO: noetic # Replace noetic for your chosen distro.
+          ROS_DISTRO: humble # Replace humble for your chosen distro.
           # UPSTREAM_WORKSPACE: dependencies.rosinstall
           BEFORE_BUILD_TARGET_WORKSPACE: 'apt update -q && apt install -y python3-tk && python3 -m pip install pillow numpy ruamel.yaml'
           PYLINT_ARGS: '--errors-only'
