@@ -13,3 +13,6 @@ $ source ~/.bashrc
 $ echo "alias map_merger='$VENV_PYTHON path/to/map_merger/map_merger.py'" >> ~/.bashrc
 $ echo "alias map_trimmer='$VENV_PYTHON path/to/multi_map_manager/map_merger/map_trimmer.py'" >> ~/.bashrc
 ```
+
+## Documentation
+- [Wiki (Japanese)](https://github.com/KBKN-Autonomous-Robotics-Lab/multi_map_manager/wiki)
